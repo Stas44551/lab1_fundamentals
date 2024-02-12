@@ -6,9 +6,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.RadioButton
 import androidx.compose.material.RadioButtonDefaults
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -69,7 +73,7 @@ fun MyRadioGroup() {
                 unselectedColor = colorResource(id = R.color.black),
                 disabledColor = Color.LightGray
             )
-            
+
             RadioButton(
                 colors = colors,
                 selected = isSelected,
@@ -82,5 +86,14 @@ fun MyRadioGroup() {
 
 @Composable
 fun MyFloatingActionButton() {
-    //TODO add your code here
+    FloatingActionButton(
+        onClick = {},
+        backgroundColor = colorResource(id = R.color.purple_700),
+        contentColor = Color.White,
+        content = {
+            Icon(Icons.Filled.Favorite, contentDescription = "Test FAB")
+        }
+        )
+        
+
 }
