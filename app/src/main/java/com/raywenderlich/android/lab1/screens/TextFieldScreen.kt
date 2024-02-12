@@ -30,10 +30,10 @@ fun TextFieldScreen() {
 
 @Composable
 fun MyTextField() {
-  //  val textValue = remember { mutableStateOf("") }
-  //  TextField(
-   //     value = textValue.value ,
-    //    onValueChange = {textValue.value = it},
-    //    label = {}
-  //  )
+    val textValue = remember { mutableStateOf("") }
+   TextField(
+       value = textValue.value ,
+        onValueChange = {textValue.value = it},
+      label = {}
+    )
 }
