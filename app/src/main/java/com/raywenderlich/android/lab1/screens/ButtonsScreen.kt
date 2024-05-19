@@ -26,17 +26,14 @@ import com.raywenderlich.android.lab1.R
 import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
-
 @Composable
 fun ExploreButtonsScreen() {
     Column(modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
-
         MyButton()
         MyRadioGroup()
         MyFloatingActionButton()
-
         BackButtonHandler {
             FundamentalsRouter.navigateTo(Screen.Navigation)
         }
@@ -45,29 +42,33 @@ fun ExploreButtonsScreen() {
 
 @Composable
 fun MyButton() {
+    //TODO add your code here
     Button(
         onClick = {},
-    colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
-    border = BorderStroke(
-        1.dp,
-        color = colorResource(id = R.color.black)
+        colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
+        border = BorderStroke(
+            1.dp,
+            color = colorResource(id = R.color.black)
+        )
     )
-    ){
+    {
         Text(
             text = stringResource(id = R.string.set_button),
             color = Color.White
         )
     }
-
 }
 
 @Composable
 fun MyRadioGroup() {
+    //TODO add your code here
     val radioButtons = listOf(0,1,2)
-    val selectedButton = remember { mutableStateOf(radioButtons.first()) }
+
+    val selectedButtons = remember { mutableStateOf(radioButtons.first()) }
+
     Column {
         radioButtons.forEach { index ->
-            val isSelected = index == selectedButton.value
+            val isSelected = index == selectedButtons.value
             val colors = RadioButtonDefaults.colors(
                 selectedColor = colorResource(id = R.color.purple_500),
                 unselectedColor = colorResource(id = R.color.black),
@@ -77,23 +78,21 @@ fun MyRadioGroup() {
             RadioButton(
                 colors = colors,
                 selected = isSelected,
-                onClick = { selectedButton.value = index }
+                onClick = { selectedButtons.value = index}
             )
         }
     }
 }
 
-
 @Composable
 fun MyFloatingActionButton() {
+    //TODO add your code here
     FloatingActionButton(
         onClick = {},
         backgroundColor = colorResource(id = R.color.purple_700),
         contentColor = Color.White,
         content = {
-            Icon(Icons.Filled.Favorite, contentDescription = "Test FAB")
+            Icon(Icons.Filled.Favorite, contentDescription = "Test FAB" )
         }
-        )
-
-
+    )
 }
