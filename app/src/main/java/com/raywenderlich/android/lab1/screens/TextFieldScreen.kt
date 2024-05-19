@@ -32,7 +32,6 @@ fun TextFieldScreen() {
 
 @Composable
 fun MyTextField() {
-    //TODO add your code here
     val textValue = remember { mutableStateOf( "") }
 
     val primaryColor = colorResource(id = R.color.purple_500)
