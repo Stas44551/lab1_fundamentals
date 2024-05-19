@@ -29,5 +29,6 @@ fun ProgressIndicatorScreen() {
 
     BackButtonHandler {
         FundamentalsRouter.navigateTo(Screen.Navigation)
+
     }
 }
