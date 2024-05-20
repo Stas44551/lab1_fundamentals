@@ -17,6 +17,7 @@
     <string name="title_alertDialog">attention</string>
     <string name="alertDialog_about">dialog window</string>
     <string name="insert_email">Email</string>
+    <string name="row_container">контейнер Row</string>
     <string name="first">first</string>
     <string name="second">second</string>
     <string name="third">third</string>
