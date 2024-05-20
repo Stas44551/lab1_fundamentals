@@ -37,6 +37,5 @@ fun MyRow(){
                 fontSize = 18.sp
             )
         }
-
     }
 }
