@@ -1,5 +1,4 @@
 package com.raywenderlich.android.lab1.screens
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,15 +12,14 @@ import androidx.compose.ui.unit.dp
 import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
-
 @Composable
 fun ProgressIndicatorScreen() {
-
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
+        //TODO add your code here
         CircularProgressIndicator(
             color = colorResource(id = androidx.compose.ui.R.color.vector_tint_theme_color),
             strokeWidth = 5.dp
@@ -31,5 +29,6 @@ fun ProgressIndicatorScreen() {
 
     BackButtonHandler {
         FundamentalsRouter.navigateTo(Screen.Navigation)
+
     }
 }

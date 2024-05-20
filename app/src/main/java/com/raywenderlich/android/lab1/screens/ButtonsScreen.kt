@@ -26,17 +26,14 @@ import com.raywenderlich.android.lab1.R
 import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
-
 @Composable
 fun ExploreButtonsScreen() {
     Column(modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
-
         MyButton()
         MyRadioGroup()
         MyFloatingActionButton()
-
         BackButtonHandler {
             FundamentalsRouter.navigateTo(Screen.Navigation)
         }
@@ -45,6 +42,7 @@ fun ExploreButtonsScreen() {
 
 @Composable
 fun MyButton() {
+    //TODO add your code here
     Button(
         onClick = {},
         colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.blue)),
@@ -63,6 +61,7 @@ fun MyButton() {
 
 @Composable
 fun MyRadioGroup() {
+    //TODO add your code here
     val radioButtons = listOf(0,1,2)
 
     val selectedButtons = remember { mutableStateOf(radioButtons.first()) }
@@ -87,6 +86,7 @@ fun MyRadioGroup() {
 
 @Composable
 fun MyFloatingActionButton() {
+    //TODO add your code here
     FloatingActionButton(
         onClick = {},
         backgroundColor = colorResource(id = R.color.purple_700),

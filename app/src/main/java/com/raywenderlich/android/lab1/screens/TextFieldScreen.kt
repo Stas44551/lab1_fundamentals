@@ -1,5 +1,4 @@
 package com.raywenderlich.android.lab1.screens
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,7 +16,6 @@ import com.raywenderlich.android.lab1.R
 import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
-
 @Composable
 fun TextFieldScreen() {
     Column(
@@ -27,7 +25,6 @@ fun TextFieldScreen() {
     ) {
         MyTextField()
     }
-
     BackButtonHandler {
         FundamentalsRouter.navigateTo(Screen.Navigation)
     }
